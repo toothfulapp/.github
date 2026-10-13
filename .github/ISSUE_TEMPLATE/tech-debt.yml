@@ -1,0 +1,29 @@
+name: Tech debt
+description: Refactoring, cleanup, or engineering work we deferred.
+type: Tech debt
+projects: ["toothfulapp/1"]
+body:
+  - type: textarea
+    id: current
+    attributes:
+      label: What's the debt?
+      description: What is wrong with the current code, config, or process?
+    validations:
+      required: true
+  - type: textarea
+    id: cost
+    attributes:
+      label: Why it matters
+      description: What does it cost us today, or what will it block later? (bugs, slow builds, onboarding, risk)
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed fix
+  - type: input
+    id: where
+    attributes:
+      label: Where
+      description: Files, packages, or workflows involved.
+      placeholder: src/main/kotlin/com/toothful/core/common/Slugify.kt

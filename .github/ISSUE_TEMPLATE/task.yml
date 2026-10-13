@@ -1,0 +1,23 @@
+name: Task
+description: Setup, chores, or one-off work that isn't a bug or a feature.
+type: Task
+projects: ["toothfulapp/1"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What needs doing?
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: Done when
+      placeholder: |
+        - [ ] …
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes or links

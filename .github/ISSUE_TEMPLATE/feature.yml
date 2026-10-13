@@ -1,0 +1,36 @@
+name: Feature
+description: A new capability or a change to how something works.
+type: Feature
+projects: ["toothfulapp/1"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or goal
+      description: Who needs this and why? Describe the need, not the solution.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: What should it do? Include API shapes, routes, or mockups if you have them.
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: How will we know it's done?
+      placeholder: |
+        - [ ] A user can …
+        - [ ] The spec declares …
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Repos affected
+      description: e.g. api (spec), core (implementation), webapp (UI). Split into sub-issues per repo if it spans several.
+  - type: textarea
+    id: notes
+    attributes:
+      label: Alternatives, open questions, or notes

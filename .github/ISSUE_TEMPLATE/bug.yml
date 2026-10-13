@@ -1,0 +1,53 @@
+name: Bug
+description: Something is broken or behaves differently from the spec.
+type: Bug
+projects: ["toothfulapp/1"]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: What's wrong?
+      description: One or two sentences on the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: Requests, clicks, or commands — exact enough that someone else can see it happen.
+      placeholder: |
+        1. POST /@alice/recipes with name "親子丼"
+        2. POST again with name "ラーメン"
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected vs actual
+      placeholder: |
+        Expected: 201
+        Actual: 409 SLUG_TAKEN
+    validations:
+      required: true
+  - type: input
+    id: where
+    attributes:
+      label: Where
+      description: Endpoint, route, screen, or file.
+      placeholder: POST /@{handle}/recipes
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - P0 Urgent — outage, security, or data loss
+        - P1 High — blocks a release or many users
+        - P2 Medium — should fix soon
+        - P3 Low — minor or cosmetic
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Logs, screenshots, or notes
+      description: Paste request IDs (X-Request-Id), stack traces, or links.
